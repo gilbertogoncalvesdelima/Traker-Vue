@@ -2,8 +2,7 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
 import Tarefas from '../views/Tarefas.vue'
 import Projetos from '../views/Projetos.vue'
-import Formulario from '../views/Projetos/Formulario.vue'
-import Lista from '../views/Projetos/Lista.vue'
+
 
 // Define o tipo de registro de rota usando RouteRecordRaw.
 const rotas: RouteRecordRaw[] = [
@@ -13,9 +12,12 @@ const rotas: RouteRecordRaw[] = [
         name: 'Tarefas',
         component: Tarefas
     },
-   
-        
-    
+    {
+        // Rota raiz, exibindo a lista de tarefas.
+        path: '/projetos',
+        name: 'Projetos',
+        component: Projetos
+    },         
 ]
 
 // Cria uma instância de roteador usando o modo de histórico hash e as rotas definidas.

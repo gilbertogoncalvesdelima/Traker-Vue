@@ -1,11 +1,27 @@
 <template>
   <header>
       <h1>
-        <img src="../assets/logo.png" alt="">  
+        <img src="../assets/logo.png" alt="../assets/logo.png">  
       </h1>
-      <button class="button" @click="alterarTema">
-        {{ textoBotao }}
-      </button>
+      <div class="has-text-centered">
+      <button class="button" @click="alterarTema"> Ativar modo {{ textoBotao }}</button>
+      </div>
+ 
+      <nav class="panel mat-5">
+          <ul>
+            <li>
+              <Router-link to="/" class="link">
+                <i class="fas fa-tasks"></i>
+                tarefas
+              </Router-link>
+              <Router-link to="/projetos" class="link">
+                <i class="fas fa-project-diagram"></i>
+                projetos
+              </Router-link>
+
+            </li>
+          </ul>
+      </nav>
   </header>
 </template>
 
@@ -38,17 +54,35 @@ export default defineComponent({
 </script>
 
 <style scoped>
+h1 {
+  text-align: center;
+}
+strong {
+  color: #f95738;
+}
 header {
-  padding: 1rem;
   background: #0d3b66;
   width: 100%;
   height: 100vh;
-  text-align: center;
+  padding: 2rem;
 }
 @media only screen and (max-width: 768px) {
   header {
-    padding: 2.5rem;
     height: auto;
   }
 }
+.panel li {
+    margin: 8px 0;
+}
+.link {
+    color: #fff;
+    display: block;
+}
+.link:hover {
+    color: #FAF0CA;
+}
+.link.router-link-active {
+    color: #FAF0CA;
+}
+
 </style>

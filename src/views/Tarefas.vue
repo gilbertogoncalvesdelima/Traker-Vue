@@ -16,7 +16,7 @@ export default defineComponent({
   components: {
     Formulario,
     Tarefa,
-  
+
   },
   data () {
     return {
