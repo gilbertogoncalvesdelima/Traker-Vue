@@ -1,5 +1,7 @@
 # alura-tracker
 
+Aplicação responsável por controlar o tempo gasto em cada tarefa
+
 ## Project setup
 ```
 npm install
