@@ -4,7 +4,7 @@
         <img src="../assets/logo.png" alt="../assets/logo.png">  
       </h1>
       <div class="has-text-centered">
-      <button class="button" @click="alterarTema"> Ativar modo {{ textoBotao }}</button>
+      <button class="button" @click="alterarTema"> {{ textoBotao }}</button>
       </div>
  
       <nav class="panel mat-5">
