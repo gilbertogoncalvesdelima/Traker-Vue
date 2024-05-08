@@ -3,8 +3,10 @@ import App from './App.vue'
 
 import '@fortawesome/fontawesome-free/css/all.css'
 import roteador from './roteador'
+import { key, store } from './store'
 
 createApp(App)
 // aqui estou dizendo para utilizar o reteador
 .use(roteador)
+.use(store, key)
 .mount('#app')
